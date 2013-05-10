@@ -6,7 +6,7 @@ import android.view.Menu;
 
 public class MainActivity extends Activity {
 /**
- * gzp
+ * gzp gyh
  */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
