@@ -9,6 +9,7 @@
    	 	android:layout_height="wrap_content"
    	 	android:contentDescription="@string/kn_protect_guide_third"
    	 	android:src="@drawable/kn_protect_guide_third"
+   	 	android:layout_centerHorizontal="true"
         />
     
     <Button 
