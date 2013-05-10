@@ -23,7 +23,7 @@ public abstract class BaseParser<T> {
 		}else{
 			JSONObject jsonObject = new JSONObject(paramString); 
 			String result = jsonObject.getString("status");
-			if(result!=null && !result.equals("ok")){
+			if(result!=null && result.equals("OK")){
 				return result;
 			}else{
 				return null;
