@@ -4,5 +4,9 @@
     <string name="app_name">FindMe</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="kn_protect_guide_first">kn_protect_guide_first</string>
+    <string name="bt_fragment_guide_next">下一步</string>
+    <string name="kn_protect_guide_second">kn_protect_guide_second</string>
+    <string name="kn_protect_guide_third">kn_protect_guide_third</string>
 
 </resources>
