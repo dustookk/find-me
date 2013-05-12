@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="iv_guide_top" type="id"/>
+    <item name="bt_next" type="id" />
+    <item name="ll_fragment" type="id" />
+    <item name="et_keyword" type="id" />
+</resources>
