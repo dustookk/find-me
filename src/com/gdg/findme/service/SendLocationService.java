@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class SendLocationService extends IntentService {
 	private LocationClient mLocClient;
-	private TextView mTv;
+
 	private static final String TAT = "Locationreporter";
 
 	public SendLocationService() {
@@ -23,36 +23,25 @@ public class SendLocationService extends IntentService {
 	protected void onHandleIntent(Intent intent) {
 		Log.i(TAT, "IntentService ");
 		String originatingAddress = intent.getStringExtra("originatingAddress");
-		mTv = new TextView(getApplicationContext());
-		String locationResult = mTv.getText().toString();
 		mLocClient = ((Location)getApplication()).mLocationClient;
-		((Location)getApplication()).mTv = mTv;
 		setLocationOption();
 		mLocClient.start();
 		
 		
-		while(locationResult==""){
-			//TODO 获得位置信息
-			locationResult = mTv.getText().toString();
+		while(Location.locationResult==""){
 			try {
 				Thread.sleep(1000);
-				Log.i(TAT, "no locationResult "+locationResult);
+				Log.i(TAT, "no locationResult "+Location.locationResult);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			/*locationResult = GPSInfoProvider.getInstance(this).getLocation();
-			try {
-				Thread.sleep(1000);
-				Log.i(TAT, "no locationResult "+locationResult);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}*/
 		}
 		
-		Log.i(TAT, "location "+locationResult);
+		Log.i(TAT, "location "+Location.locationResult);
 //		关闭gps位置服务
 		mLocClient.stop();
-		SmsManager.getDefault().sendTextMessage(originatingAddress, null,locationResult, null, null);
+		//发送短信的功能
+		//SmsManager.getDefault().sendTextMessage(originatingAddress, null,locationResult, null, null);
 	}
 	private void setLocationOption(){
 		LocationClientOption option = new LocationClientOption();
