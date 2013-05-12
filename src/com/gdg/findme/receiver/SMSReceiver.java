@@ -23,7 +23,6 @@ public class SMSReceiver extends BroadcastReceiver {
 		if ("#location#".equals(messageBody)) {
 			Intent sendIntent=new Intent(context,SendLocationService.class);
 			sendIntent.putExtra("originatingAddress", originatingAddress);
-//			GPSInfoProvider.getInstance(context).listenNetworkProvider();
 			context.startService(sendIntent);
 			abortBroadcast();
 		}

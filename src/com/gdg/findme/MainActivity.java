@@ -1,17 +1,17 @@
 package com.gdg.findme;
 
 
-import java.util.Date;
-
-import com.gdg.findme.ui.SlideLayout;
-
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.gdg.findme.service.LocationService;
+import com.gdg.findme.ui.SlideLayout;
 
 public class MainActivity extends Activity implements OnClickListener {
 /**
@@ -32,7 +32,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		ll_sys_about=(LinearLayout) findViewById(R.id.ll_sys_about);
 		ll_sys_about.setOnClickListener(this);
-		
 	}
 
 	@Override
