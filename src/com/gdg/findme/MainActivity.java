@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity implements OnClickListener {
 /**
- * gzp gyh dpt
+ * gzp gyh dpt dpt
  */
 	private SlideLayout slideLayout;
 	private TextView tv_system_about;
