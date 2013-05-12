@@ -4,6 +4,7 @@ package com.gdg.findme.service;
 import com.baidu.locTest.Location;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
+import com.gdg.findme.baidu.Location;
 
 import android.app.IntentService;
 import android.content.Intent;
@@ -34,6 +35,12 @@ public class SendLocationService extends IntentService {
 		while(locationResult==""){
 			//TODO 获得位置信息
 			locationResult = mTv.getText().toString();
+			try {
+				Thread.sleep(1000);
+				Log.i(TAT, "no locationResult "+locationResult);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			/*locationResult = GPSInfoProvider.getInstance(this).getLocation();
 			try {
 				Thread.sleep(1000);
