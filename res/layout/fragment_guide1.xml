@@ -4,18 +4,9 @@
     android:layout_height="match_parent"
     android:padding="5dip"
     >
-    <ImageView 
+    <EditText 
+        android:id="@id/et_keyword"
         android:layout_width="wrap_content"
-   	 	android:layout_height="wrap_content"
-   	 	android:contentDescription="@string/kn_protect_guide_first"
-   	 	android:src="@drawable/kn_protect_guide_first"
-   	 	android:layout_centerHorizontal="true"
-        />
-    
-    <Button 
-        android:layout_width="match_parent"
-   	 	android:layout_height="wrap_content"
-   	 	android:layout_alignParentBottom="true"
-   	 	android:text="@string/bt_fragment_guide_next"
+    	android:layout_height="wrap_content"
         />
 </RelativeLayout>

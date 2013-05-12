@@ -1,7 +1,6 @@
 package com.gdg.findme.service;
 
 
-import com.baidu.locTest.Location;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.gdg.findme.baidu.Location;
