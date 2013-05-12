@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class SendLocationService extends IntentService {
 	private LocationClient mLocClient;
 
-	private static final String TAT = "Locationreporter";
+	private static final String TAT = "com.gdg.findme";
 
 	public SendLocationService() {
 		super("name");

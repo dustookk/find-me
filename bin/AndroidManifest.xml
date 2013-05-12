@@ -8,6 +8,21 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
 
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<!-- SDK离线地图和cache功能需要读写外部存储器 -->
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<!-- 获取设置信息和详情页直接拨打电话需要以下权限  -->
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
@@ -21,13 +36,14 @@
 	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
 	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
 	<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission> 
+    
+    
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
         android:targetPackage="com.gdg.findme" >
     </instrumentation>
     
     <application
-        android:name="com.baidu.locTest.Location"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -42,6 +58,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+                        <activity
+                    android:name=".GeoCoderDemo"
+                    android:configChanges="orientation|keyboardHidden"
+                    android:screenOrientation="sensor" >
+ </activity>
+        
         <service  android:name="com.gdg.findme.service.LocationService">
         </service>
         <service  android:name="com.gdg.findme.service.SendLocationService">

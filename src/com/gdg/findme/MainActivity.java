@@ -1,13 +1,11 @@
 package com.gdg.findme;
 
 
-import java.util.Date;
-
-import com.gdg.findme.ui.SlideLayout;
-
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+
+import android.os.Bundle;
+
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,9 +13,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.gdg.findme.service.LocationService;
+import com.gdg.findme.ui.SlideLayout;
+
 public class MainActivity extends Activity implements OnClickListener {
 /**
- * gzp gyh dpt
+ * gzp gyh dpt dpt
  */
 	private SlideLayout slideLayout;
 	private TextView tv_system_about;
@@ -36,6 +37,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		ll_sys_about=(LinearLayout) findViewById(R.id.ll_sys_about);
 		ll_sys_about.setOnClickListener(this);
+
 		
 		iv_timeDirection_logo=(ImageView) findViewById(R.id.iv_timeDirection_logo);
 		iv_timeDirection_logo.setOnClickListener(this);
