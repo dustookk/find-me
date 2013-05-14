@@ -18,7 +18,7 @@ import com.gdg.findme.ui.SlideLayout;
 
 public class MainActivity extends Activity implements OnClickListener {
 /**
- * jjjj
+ * dpt 
  */
 	private SlideLayout slideLayout;
 	private TextView tv_system_about;
