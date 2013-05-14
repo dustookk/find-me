@@ -1,5 +1,7 @@
 package com.gdg.findme.vo;
 
+
+
 public class Address {
 
 	private String formatted_address;
