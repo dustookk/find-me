@@ -70,13 +70,9 @@ public class GuideActivity extends FragmentActivity implements OnClickListener {
 		// beginTransaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left);
 		switch (index) {
 		case 0: 
-			
 			EditText et_keyword = (EditText) guideFragment1.getView().findViewById(R.id.et_keyword);
 			String keyword = et_keyword.getText().toString().trim();
 			Logger.i(TAG, "keyword "+keyword);
-			
-			
-			
 			index++;
 			beginTransaction.replace(R.id.ll_fragment, fragments[index]);
 			beginTransaction.addToBackStack(null);
