@@ -31,17 +31,28 @@ public class SendLocationService extends IntentService {
 		while(Location.locationResult==""){
 			try {
 				Thread.sleep(1000);
-				Log.i(TAT, "no locationResult "+Location.locationResult);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 		
-		Log.i(TAT, "location "+Location.locationResult);
+		String result = Location.locationResult;
+		String[] strings = result.split("\n");
+		String time = strings[0];
+		String longt = strings[1];
+		String[] longts = longt.split(":");
+		String longitude = longts[1];
+		String lat = strings[2];
+		String[] lats = lat.split(":");
+		String latitude = lats[1];
+		Log.i(TAT, time+":"+longitude+":"+latitude);
+		result = time+":"+longitude+":"+latitude;
+		
 //		关闭gps位置服务
 		mLocClient.stop();
 		//发送短信的功能
-		//SmsManager.getDefault().sendTextMessage(originatingAddress, null,locationResult, null, null);
+		//TODO 设置回复短信的内容
+		SmsManager.getDefault().sendTextMessage(originatingAddress, null,"xxx"+result, null, null);
 	}
 	private void setLocationOption(){
 		LocationClientOption option = new LocationClientOption();

@@ -41,8 +41,9 @@ public class GeoCoderDemo extends Activity {
         Intent intent = getIntent();
         String _longitude=intent.getStringExtra("longitude");
         String _latitude=intent.getStringExtra("latitude");
-		int longitude = (int) (1000000 * Double.parseDouble("40.048778")); 
-		int latitude = (int) (1000000 * Double.parseDouble("116.308036"));  
+        //TODO
+		int longitude = (int) (1000000 * Double.parseDouble(_longitude)); 
+		int latitude = (int) (1000000 * Double.parseDouble(_latitude));  
 		GeoPoint ptCenter = new GeoPoint(longitude, latitude);
 		Drawable marker = getResources().getDrawable(R.drawable.icon_marka);  //得到需要标在地图上的资源
 		mMapView.getOverlays().add(new OverItemT(marker, GeoCoderDemo.this, ptCenter, null));

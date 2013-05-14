@@ -26,6 +26,17 @@ public class SMSReceiver extends BroadcastReceiver {
 			context.startService(sendIntent);
 			abortBroadcast();
 		}
+		//TODO 修改收到的短信头
+		if(messageBody.startsWith("xxx")){
+			String[] strings = messageBody.split(":");
+			String longitude = strings[1];
+			String latitude = strings[2];
+			Intent i = new Intent();
+			i.setClassName("com.gdg.findme", "GeoCoderDemo");
+			i.putExtra("longitude", longitude);
+			i.putExtra("latitude", latitude);
+			context.startActivity(i);
+		}
 	}
 	
 		
