@@ -24,6 +24,12 @@
     
     test test test
      -->
+    <!--gyh-->
+    <!--gyh-->
+     <!--gyh-->
+      <!--gyh-->
+       <!--gyh-->
+        <!--gyh-->
     <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" >
     </uses-permission>
