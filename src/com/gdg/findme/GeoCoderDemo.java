@@ -41,7 +41,7 @@ public class GeoCoderDemo extends Activity {
         Intent intent = getIntent();
         String _longitude=intent.getStringExtra("longitude");
         String _latitude=intent.getStringExtra("latitude");
-        //TODO
+        //TODO gzp 这儿todo啥啊
 		int longitude = (int) (1000000 * Double.parseDouble(_longitude)); 
 		int latitude = (int) (1000000 * Double.parseDouble(_latitude));  
 		GeoPoint ptCenter = new GeoPoint(longitude, latitude);

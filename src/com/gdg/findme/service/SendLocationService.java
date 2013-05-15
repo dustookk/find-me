@@ -1,16 +1,19 @@
 package com.gdg.findme.service;
 
 
-import com.baidu.location.LocationClient;
-import com.baidu.location.LocationClientOption;
-import com.gdg.findme.baidu.Location;
-
 import android.app.IntentService;
 import android.content.Intent;
 import android.telephony.SmsManager;
 import android.util.Log;
-import android.widget.TextView;
 
+import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
+import com.gdg.findme.baidu.Location;
+/**
+ * 把自己的坐标回复给请求手机
+ * @author gaoyihang
+ *
+ */
 public class SendLocationService extends IntentService {
 	private LocationClient mLocClient;
 

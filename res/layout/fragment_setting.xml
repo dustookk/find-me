@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<CheckedTextView 
+	    android:layout_width="match_parent"
+    	android:layout_height="50dip"
+	    android:text="开启服务"
+	    android:textSize="20sp"
+	    android:gravity="center_vertical"
+	    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+	    />
+	<View 
+	    android:layout_width="match_parent"
+    	android:layout_height="1dip"
+    	android:background="#55000000"
+	    />
+
+	<TextView
+	    android:layout_width="match_parent"
+	    android:layout_height="50dip"
+	    android:drawableRight="@drawable/ic_go_search_api_holo_light"
+	    android:gravity="center_vertical"
+	    android:text="设置白名单"
+	    android:textSize="20sp" />
+	<View 
+	    android:layout_width="match_parent"
+    	android:layout_height="1dip"
+    	android:background="#55000000"
+	    />
+</LinearLayout>

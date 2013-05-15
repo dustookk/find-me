@@ -26,7 +26,6 @@ public class TestJson extends AndroidTestCase {
 				Logger.i(TAG, address.toString());
 			}
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
