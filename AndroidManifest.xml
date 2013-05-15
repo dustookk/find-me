@@ -19,6 +19,13 @@
     <!-- SDK离线地图和cache功能需要读写外部存储器 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
     </uses-permission>
+    
+    <!--gyh-->
+    <!--gyh-->
+     <!--gyh-->
+      <!--gyh-->
+       <!--gyh-->
+        <!--gyh-->
     <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" >
     </uses-permission>
