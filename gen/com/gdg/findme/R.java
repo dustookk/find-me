@@ -26,47 +26,68 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int general__shared__switch_normal=0x7f020000;
-        public static final int general__shared__switch_selected=0x7f020001;
-        public static final int ic_go_search_api_holo_light=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int icon_marka=0x7f020004;
-        public static final int kn_protect_guide_first=0x7f020005;
-        public static final int kn_protect_guide_second=0x7f020006;
-        public static final int kn_protect_guide_third=0x7f020007;
-        public static final int sort_bg=0x7f020008;
-        public static final int store__top_view__tab1_focus=0x7f020009;
-        public static final int store__top_view__tab1_normal=0x7f02000a;
-        public static final int store__top_view__tab2_focus=0x7f02000b;
-        public static final int store__top_view__tab2_normal=0x7f02000c;
-        public static final int store__top_view__tab_bg=0x7f02000d;
-        public static final int xuxian=0x7f02000e;
+        public static final int contact_dialog=0x7f020000;
+        public static final int general__shared__switch_normal=0x7f020001;
+        public static final int general__shared__switch_selected=0x7f020002;
+        public static final int ic_add_contact_holo_dark=0x7f020003;
+        public static final int ic_go_search_api_holo_light=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int icon_marka=0x7f020006;
+        public static final int kn_protect_guide_first=0x7f020007;
+        public static final int kn_protect_guide_second=0x7f020008;
+        public static final int kn_protect_guide_third=0x7f020009;
+        public static final int sort_bg=0x7f02000a;
+        public static final int store__top_view__tab1_focus=0x7f02000b;
+        public static final int store__top_view__tab1_normal=0x7f02000c;
+        public static final int store__top_view__tab2_focus=0x7f02000d;
+        public static final int store__top_view__tab2_normal=0x7f02000e;
+        public static final int store__top_view__tab_bg=0x7f02000f;
+        public static final int xuxian=0x7f020010;
     }
     public static final class id {
-        public static final int action_settings=0x7f06000e;
-        public static final int bmapView=0x7f06000d;
+        public static final int action_settings=0x7f06001b;
+        public static final int bmapView=0x7f060017;
         public static final int bt_next=0x7f060001;
+        public static final int container=0x7f06001a;
         public static final int et_keyword=0x7f060003;
+        public static final int fragment1_bt=0x7f060013;
+        public static final int fragment1_contact=0x7f060012;
+        public static final int fragment1_number=0x7f060011;
+        public static final int fragment3_backbtn=0x7f060015;
+        public static final int fragment3_showinmap=0x7f060016;
+        public static final int fragment3_tv=0x7f060014;
+        public static final int information=0x7f060010;
+        public static final int iv1=0x7f060018;
+        public static final int iv2=0x7f060019;
         public static final int iv_guide_top=0x7f060000;
-        public static final int iv_system_observe=0x7f060009;
-        public static final int iv_timeDirection_logo=0x7f06000b;
+        public static final int iv_system_observe=0x7f06000c;
+        public static final int iv_timeDirection_logo=0x7f06000e;
         public static final int ll_fragment=0x7f060002;
-        public static final int ll_sys_about=0x7f06000c;
-        public static final int parent=0x7f060005;
-        public static final int scroll_view=0x7f060006;
-        public static final int slidelayout=0x7f060004;
-        public static final int tv_sys_lasttime=0x7f060007;
-        public static final int tv_system_about=0x7f06000a;
-        public static final int tv_system_observe=0x7f060008;
+        public static final int ll_sys_about=0x7f06000f;
+        public static final int lv_contacts=0x7f060004;
+        public static final int parent=0x7f060008;
+        public static final int scroll_view=0x7f060009;
+        public static final int slidelayout=0x7f060007;
+        public static final int tv_name=0x7f060005;
+        public static final int tv_phone=0x7f060006;
+        public static final int tv_sys_lasttime=0x7f06000a;
+        public static final int tv_system_about=0x7f06000d;
+        public static final int tv_system_observe=0x7f06000b;
     }
     public static final class layout {
-        public static final int activity_guide=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int fragment_guide1=0x7f030002;
-        public static final int fragment_guide2=0x7f030003;
-        public static final int fragment_guide3=0x7f030004;
-        public static final int fragment_setting=0x7f030005;
-        public static final int geocoder=0x7f030006;
+        public static final int activity_contacts=0x7f030000;
+        public static final int activity_contacts_item=0x7f030001;
+        public static final int activity_guide=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int fragment1=0x7f030004;
+        public static final int fragment2=0x7f030005;
+        public static final int fragment3=0x7f030006;
+        public static final int fragment_guide1=0x7f030007;
+        public static final int fragment_guide2=0x7f030008;
+        public static final int fragment_guide3=0x7f030009;
+        public static final int fragment_setting=0x7f03000a;
+        public static final int geocoder=0x7f03000b;
+        public static final int home_activity=0x7f03000c;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -74,11 +95,17 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f070001;
         public static final int app_name=0x7f070000;
+        public static final int back=0x7f07000a;
         public static final int bt_fragment_guide_next=0x7f070004;
         public static final int hello_world=0x7f070002;
         public static final int kn_protect_guide_first=0x7f070003;
         public static final int kn_protect_guide_second=0x7f070005;
         public static final int kn_protect_guide_third=0x7f070006;
+        public static final int location=0x7f070008;
+        public static final int ok=0x7f070007;
+        public static final int showinmap=0x7f070009;
+        public static final int title1=0x7f07000b;
+        public static final int title2=0x7f07000c;
     }
     public static final class style {
         /** 

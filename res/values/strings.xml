@@ -8,5 +8,11 @@
     <string name="bt_fragment_guide_next">下一步</string>
     <string name="kn_protect_guide_second">kn_protect_guide_second</string>
     <string name="kn_protect_guide_third">kn_protect_guide_third</string>
+    <string name="ok">确认</string>
+    <string name="location">具体位置</string>
+    <string name="showinmap">在地图中查看</string>
+    <string name="back">返回</string>
+    <string name="title1">我要找别人</string>
+    <string name="title2">别人要找我</string>
 
 </resources>
