@@ -48,6 +48,7 @@ public class TestActivity extends Activity implements OnClickListener {
 		} else if (v == bt_gzp) {
 			Intent i = new Intent(this, HomeActivity.class);
 			startActivity(i);
+			// gzp_test
 		}
 	}
 }
