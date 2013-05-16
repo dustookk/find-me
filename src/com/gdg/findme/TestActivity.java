@@ -38,16 +38,17 @@ public class TestActivity extends Activity implements OnClickListener {
 		setContentView(ll_group);
 	}
 
-	
 	@Override
 	public void onClick(View v) {
 		if (v == bt_gyh) {
-			Intent intent=new Intent(this,GuideActivity.class);
+			Intent intent = new Intent(this, GuideActivity.class);
 			startActivity(intent);
 		} else if (v == bt_dpt) {
-			
+
 		} else if (v == bt_gzp) {
-			
+			Intent i = new Intent(this, HomeActivity.class);
+			startActivity(i);
+			// gzp_test
 		}
 	}
 }
