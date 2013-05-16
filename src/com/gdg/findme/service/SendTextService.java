@@ -18,12 +18,10 @@ import com.gdg.findme.receiver.LocationHandleReceiver;
 public class SendTextService extends Service {
 
 	private LocationHandleReceiver locationHandleReceiver;
-	private MyBinder myBinder;
 	
 	@Override
 	public void onCreate() {
 		locationHandleReceiver=new LocationHandleReceiver();
-		myBinder=new MyBinder();
 		super.onCreate();
 	}
 	
@@ -47,7 +45,7 @@ public class SendTextService extends Service {
 	
 	@Override
 	public IBinder onBind(Intent intent) {
-		return myBinder;
+		return null;
 	}
 
 	
@@ -73,13 +71,6 @@ public class SendTextService extends Service {
 	private void unregister() {
 		unregisterReceiver(locationHandleReceiver);
 	}
-	
-	public class MyBinder extends Binder{
-		public void excuteUpdateUI(String longtitude,String latitude,String address) {
-			updateUI(longtitude,latitude,address);
-		}
-	}
-	
 	
 	
 }
