@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import com.gdg.findme.R;
 
 /**
- * splash页面后的住页面，主要有发送短信等功能。
+ * splash页面后的住页面，主要有发送短信等功能。 sdfsdf
  * 
  * @author mioo
  * 
