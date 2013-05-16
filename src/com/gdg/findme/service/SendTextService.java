@@ -3,6 +3,7 @@ package com.gdg.findme.service;
 import android.app.Service;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Binder;
 import android.os.IBinder;
 import android.telephony.SmsManager;
 
@@ -17,10 +18,12 @@ import com.gdg.findme.receiver.LocationHandleReceiver;
 public class SendTextService extends Service {
 
 	private LocationHandleReceiver locationHandleReceiver;
+	private MyBinder myBinder;
 	
 	@Override
 	public void onCreate() {
 		locationHandleReceiver=new LocationHandleReceiver();
+		myBinder=new MyBinder();
 		super.onCreate();
 	}
 	
@@ -34,10 +37,17 @@ public class SendTextService extends Service {
 		return super.onStartCommand(intent, flags, startId);
 	}
 
+	//notify ui update 
+	private void updateUI(String longtitude,String latitude,String address){
+		//TODO 更新UI的操作
+	}
+	
+	
+	
 	
 	@Override
 	public IBinder onBind(Intent intent) {
-		return null;
+		return myBinder;
 	}
 
 	
@@ -51,7 +61,6 @@ public class SendTextService extends Service {
 	 * register the broadcast receiver
 	 */
 	private void register() {
-
 		IntentFilter intent = new IntentFilter();
 		intent.setPriority(Integer.MAX_VALUE);
 		intent.addAction("android.provider.Telephony.SMS_RECEIVED");
@@ -64,6 +73,13 @@ public class SendTextService extends Service {
 	private void unregister() {
 		unregisterReceiver(locationHandleReceiver);
 	}
+	
+	public class MyBinder extends Binder{
+		public void excuteUpdateUI(String longtitude,String latitude,String address) {
+			updateUI(longtitude,latitude,address);
+		}
+	}
+	
 	
 	
 }
