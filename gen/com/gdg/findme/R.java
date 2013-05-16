@@ -27,28 +27,30 @@ public final class R {
     }
     public static final class drawable {
         public static final int contact_dialog=0x7f020000;
-        public static final int general__shared__switch_normal=0x7f020001;
-        public static final int general__shared__switch_selected=0x7f020002;
-        public static final int ic_add_contact_holo_dark=0x7f020003;
-        public static final int ic_go_search_api_holo_light=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int icon_marka=0x7f020006;
-        public static final int kn_protect_guide_first=0x7f020007;
-        public static final int kn_protect_guide_second=0x7f020008;
-        public static final int kn_protect_guide_third=0x7f020009;
-        public static final int sort_bg=0x7f02000a;
-        public static final int store__top_view__tab1_focus=0x7f02000b;
-        public static final int store__top_view__tab1_normal=0x7f02000c;
-        public static final int store__top_view__tab2_focus=0x7f02000d;
-        public static final int store__top_view__tab2_normal=0x7f02000e;
-        public static final int store__top_view__tab_bg=0x7f02000f;
-        public static final int xuxian=0x7f020010;
+        public static final int corner=0x7f020001;
+        public static final int general__shared__switch_normal=0x7f020002;
+        public static final int general__shared__switch_selected=0x7f020003;
+        public static final int ic_add_contact_holo_dark=0x7f020004;
+        public static final int ic_go_search_api_holo_light=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int icon_marka=0x7f020007;
+        public static final int kn_protect_guide_first=0x7f020008;
+        public static final int kn_protect_guide_second=0x7f020009;
+        public static final int kn_protect_guide_third=0x7f02000a;
+        public static final int sort_bg=0x7f02000b;
+        public static final int store__top_view__tab1_focus=0x7f02000c;
+        public static final int store__top_view__tab1_normal=0x7f02000d;
+        public static final int store__top_view__tab2_focus=0x7f02000e;
+        public static final int store__top_view__tab2_normal=0x7f02000f;
+        public static final int store__top_view__tab_bg=0x7f020010;
+        public static final int xuxian=0x7f020011;
     }
     public static final class id {
-        public static final int action_settings=0x7f06001b;
+        public static final int action_settings=0x7f06001c;
         public static final int bmapView=0x7f060017;
         public static final int bt_next=0x7f060001;
         public static final int container=0x7f06001a;
+        public static final int dialog_btn=0x7f06001b;
         public static final int et_keyword=0x7f060003;
         public static final int fragment1_bt=0x7f060013;
         public static final int fragment1_contact=0x7f060012;
@@ -88,6 +90,7 @@ public final class R {
         public static final int fragment_setting=0x7f03000a;
         public static final int geocoder=0x7f03000b;
         public static final int home_activity=0x7f03000c;
+        public static final int wait_message=0x7f03000d;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -134,5 +137,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
+        public static final int myDialog=0x7f080002;
     }
 }

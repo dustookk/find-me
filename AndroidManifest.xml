@@ -52,6 +52,8 @@
         android:name="android.test.InstrumentationTestRunner"
         android:targetPackage="com.gdg.findme" >
     </instrumentation>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
 
     <application
         android:allowBackup="true"
@@ -74,11 +76,15 @@
         <activity android:name=".GuideActivity" >
         </activity>
         <activity
+             android:theme="@style/myDialog"
             android:name=".GeoCoderDemo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="sensor" >
         </activity>
         <activity android:name="com.gdg.findme.HomeActivity" />
+        <activity android:name=".ContactsActivity" 
+            android:theme="@style/myDialog"
+            />
         
 
         <service android:name="com.gdg.findme.service.LocationService" >
