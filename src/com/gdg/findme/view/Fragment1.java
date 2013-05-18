@@ -58,6 +58,15 @@ public class Fragment1 extends Fragment implements OnClickListener {
 	private String latitude;
 
 	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		if (locationHandleReceiver != null) {
+			getActivity().unregisterReceiver(locationHandleReceiver);
+		}
+
+	}
+
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment1, container, false);
@@ -83,7 +92,7 @@ public class Fragment1 extends Fragment implements OnClickListener {
 				dialog_btn = (Button) dialog.findViewById(R.id.dialog_btn);
 				dialog_btn.setText("请稍后。。。。");
 				dialog_btn.setClickable(false);
-				dialog_btn.setOnClickListener(this);
+				// dialog_btn.setOnClickListener(this);
 				getActivity();
 				dialog.show();
 				IntentFilter intent = new IntentFilter();

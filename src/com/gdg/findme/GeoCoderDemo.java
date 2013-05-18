@@ -40,10 +40,10 @@ public class GeoCoderDemo extends Activity {
 		Intent intent = getIntent();
 		String _longitude = intent.getStringExtra("longitude");
 		String _latitude = intent.getStringExtra("latitude");
-		// int longitude = (int) (1000000 * Double.parseDouble(_longitude));
-		// int latitude = (int) (1000000 * Double.parseDouble(_latitude));
-		int longitude = (int) (1000000 * Double.parseDouble("116.307597"));
-		int latitude = (int) (1000000 * Double.parseDouble("40.048684"));
+		int longitude = (int) (1000000 * Double.parseDouble(_longitude));
+		int latitude = (int) (1000000 * Double.parseDouble(_latitude));
+		// int longitude = (int) (1000000 * Double.parseDouble("116.307597"));
+		// int latitude = (int) (1000000 * Double.parseDouble("40.048684"));
 		GeoPoint ptCenter = new GeoPoint(longitude, latitude);
 		Drawable marker = getResources().getDrawable(R.drawable.icon_marka); // 得到需要标在地图上的资源
 		mMapView.getOverlays().add(
