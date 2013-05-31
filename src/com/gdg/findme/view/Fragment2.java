@@ -1,13 +1,17 @@
 package com.gdg.findme.view;
 
-import com.gdg.findme.R;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.gdg.findme.R;
+/**
+ * 好像是设置界面
+ * @author gaoyihang
+ *
+ */
 public class Fragment2 extends Fragment {
 
 	@Override

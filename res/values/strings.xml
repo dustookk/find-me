@@ -14,5 +14,7 @@
     <string name="back">返回</string>
     <string name="title1">我要找别人</string>
     <string name="title2">别人要找我</string>
+    <string name="service_is_started">让别人可以找到我</string>
+    <string name="service_is_stoped">不让别人找到我</string>
 
 </resources>

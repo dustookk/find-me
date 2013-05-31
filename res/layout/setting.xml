@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_start_service"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_start_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="4"
+            android:text="@string/service_is_started"
+            android:textColor="@color/system_selector"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/iv_start_service"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/general__shared__switch_selected" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/xuxian" />
+
+    <TextView
+        android:id="@+id/tv_set_trust"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:text="设置白名单"
+        android:textColor="@color/system_selector"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/xuxian" />
+
+    <TextView
+        android:id="@+id/tv_system_about"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:text="关于"
+        android:textColor="@color/system_selector"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/xuxian" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/iv_timeDirection_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+
+</LinearLayout>

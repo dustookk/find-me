@@ -13,7 +13,11 @@ import android.widget.TextView;
 
 import com.gdg.findme.GeoCoderDemo;
 import com.gdg.findme.R;
-
+/**
+ * 打开这个Fragement需要传入对应的地址 
+ * @author gzp
+ *
+ */
 public class Fragment3 extends Fragment implements OnClickListener {
 	private TextView tv_addr;
 	private Button showInMap;
@@ -21,7 +25,6 @@ public class Fragment3 extends Fragment implements OnClickListener {
 	private String addr;
 	private String longitude;
 	private String latitude;
-
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -58,5 +61,4 @@ public class Fragment3 extends Fragment implements OnClickListener {
 			break;
 		}
 	}
-
 }

@@ -11,8 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-<Button 
-    android:id="@+id/dialog_btn"
+<TextView 
+    android:id="@+id/tv_dialog"
+     android:textIsSelectable="false"
      android:layout_width="match_parent"
         android:layout_height="wrap_content"
     />

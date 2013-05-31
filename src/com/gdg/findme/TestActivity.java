@@ -1,5 +1,6 @@
 package com.gdg.findme;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +9,10 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.gdg.findme.service.SendLocationService;
+
 public class TestActivity extends Activity implements OnClickListener {
+	private static final String TAT = "com.gdg.findme";
 	private LinearLayout ll_group;
 	private Button bt_gyh;
 	private Button bt_dpt;
@@ -41,10 +45,11 @@ public class TestActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		if (v == bt_gyh) {
-			Intent intent = new Intent(this, GuideActivity.class);
-			startActivity(intent);
+			Intent intent = new Intent(this, SendLocationService.class);
+			startService(intent);
 		} else if (v == bt_dpt) {
-
+			/*Intent i = new Intent(this, GeoCoderDemo.class);
+			startActivity(i);*/
 		} else if (v == bt_gzp) {
 			Intent i = new Intent(this, HomeActivity.class);
 			startActivity(i);

@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <com.gdg.findme.view.RingView
+        android:layout_width="180dip"
+        android:layout_height="180dip" />
+
+    <com.gdg.findme.view.CountDownIndicator
+        android:id="@+id/countdown_indicator"
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:layout_gravity="center" />
+</FrameLayout>

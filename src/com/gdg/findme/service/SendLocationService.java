@@ -26,12 +26,10 @@ public class SendLocationService extends IntentService {
 
 	@Override
 	protected void onHandleIntent(Intent intent) {
-		Log.i(TAT, "IntentService ");
 		String originatingAddress = intent.getStringExtra("originatingAddress");
 		mLocClient = ((Location) getApplication()).mLocationClient;
 		setLocationOption();
 		mLocClient.start();
-
 		while (Location.locationResult == "") {
 			try {
 				Thread.sleep(1000);
