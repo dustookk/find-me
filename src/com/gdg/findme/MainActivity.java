@@ -3,9 +3,7 @@ package com.gdg.findme;
 
 import android.app.Activity;
 import android.content.Intent;
-
 import android.os.Bundle;
-
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.gdg.findme.service.LocationService;
 import com.gdg.findme.ui.SlideLayout;
 
 public class MainActivity extends Activity implements OnClickListener {

@@ -8,6 +8,7 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
 
+    <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
@@ -51,7 +52,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
         <uses-library android:name="android.test.runner" />
 
         <activity android:name="com.gdg.findme.MainActivity" >
@@ -65,8 +66,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GuideActivity" >
-        </activity>
         <activity
             android:name=".GeoCoderDemo"
             android:configChanges="orientation|keyboardHidden"
@@ -74,6 +73,7 @@
             android:theme="@style/myDialog" >
         </activity>
         <activity android:name="com.gdg.findme.HomeActivity" />
+        <activity android:name="com.gdg.findme.TrustActivity" />
         <activity
             android:name=".ContactsActivity"
             android:theme="@style/myDialog" />

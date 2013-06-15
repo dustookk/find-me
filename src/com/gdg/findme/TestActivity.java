@@ -1,6 +1,5 @@
 package com.gdg.findme;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +11,7 @@ import android.widget.LinearLayout;
 import com.gdg.findme.service.SendLocationService;
 
 public class TestActivity extends Activity implements OnClickListener {
-	private static final String TAT = "com.gdg.findme";
+	protected static final String TAG = "com.gdg.findme";
 	private LinearLayout ll_group;
 	private Button bt_gyh;
 	private Button bt_dpt;
@@ -48,12 +47,14 @@ public class TestActivity extends Activity implements OnClickListener {
 			Intent intent = new Intent(this, SendLocationService.class);
 			startService(intent);
 		} else if (v == bt_dpt) {
-			/*Intent i = new Intent(this, GeoCoderDemo.class);
-			startActivity(i);*/
+			//06-12 17:17:05.598: I/com.gdg.findme(23121): #findme#_重庆市永川区红河中路_29.360038_105.943658
+			Intent i = new Intent(this, GeoCoderDemo.class);
+			i.putExtra("longitude", "105.943658");
+			i.putExtra("latitude", "29.360038");
+			startActivity(i);
 		} else if (v == bt_gzp) {
 			Intent i = new Intent(this, HomeActivity.class);
 			startActivity(i);
-			// gzp_test
 		}
 	}
 }

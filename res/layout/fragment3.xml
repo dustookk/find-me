@@ -1,59 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#1dabc5" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" 
-            android:gravity="center_horizontal">
-            <TextView
-                android:textColor="@android:color/white"
-                android:textSize="25dp"
-                android:gravity="center"
-                android:layout_marginTop="20dp"
-                android:id="@+id/fragment3_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/location" />
-
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/fragment3_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" >
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/location"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
-            android:gravity="center_horizontal">
+    <Button
+        android:id="@+id/fragment3_backbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/back" />
 
-	<Button
-	    android:text="@string/back"
-	    android:id="@+id/fragment3_backbtn"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentBottom="true"
-	    />
+    <Button
+        android:id="@+id/fragment3_showinmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment3_backbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="84dp"
+        android:text="@string/showinmap" />
 
-	<Button
-	    android:id="@+id/fragment3_showinmap"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_above="@+id/fragment3_backbtn"
-	    android:layout_centerHorizontal="true"
-	    android:layout_marginBottom="84dp"
-	    android:text="@string/showinmap" />
-
-        </RelativeLayout>
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

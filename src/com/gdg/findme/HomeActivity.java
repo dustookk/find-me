@@ -6,39 +6,37 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.TextView;
 
-import com.gdg.findme.view.Fragment2;
-import com.gdg.findme.view.Fragment3;
-import com.gdg.findme.view.Fragment_main;
-import com.gdg.findme.view.Fragment_setting;
+import com.gdg.findme.view.FragmentResult;
+import com.gdg.findme.view.FragmentMain;
+import com.gdg.findme.view.FragmentSetting;
 
 public class HomeActivity extends FragmentActivity implements OnClickListener {
 	private TextView iv1;
 	private TextView iv2;
 
-	public Fragment_main fragment_main;
-	public Fragment_setting fragment_setting;
-	public Fragment3 fragment3;
+	public FragmentMain fragment_main;
+	public FragmentSetting fragment_setting;
+	public FragmentResult fragment3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		// getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 		// WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.home_activity);
 
-		fragment_main = new Fragment_main();
-		fragment_setting = new Fragment_setting();
-		fragment3 = new Fragment3();
+		fragment_main = new FragmentMain();
+		fragment_setting = new FragmentSetting();
+		fragment3 = new FragmentResult();
 
 		iv1 = (TextView) findViewById(R.id.iv1);
 		iv2 = (TextView) findViewById(R.id.iv2);
 		iv1.setOnClickListener(this);
 		iv2.setOnClickListener(this);
 		onClick(iv1);
+		
 	}
 
 	@Override

@@ -23,7 +23,7 @@ public class HttpClientAdapter {
 		try {
 			return httpClient.execute(httpGet, new BasicResponseHandler());
 		} catch (Exception e) {
-			e.printStackTrace();
+			//联网异常
 			return null;
 		}
 	

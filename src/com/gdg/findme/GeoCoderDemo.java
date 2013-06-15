@@ -38,13 +38,12 @@ public class GeoCoderDemo extends Activity {
 		mMapView.displayZoomControls(true);// 显示缩放控件，可以选择是否请求焦点选中以便通过按键访问。
 		mMapView.setDoubleClickZooming(true);// 设置mapview是否支持双击放大效果
 		Intent intent = getIntent();
-		String _longitude = intent.getStringExtra("longitude");
-		String _latitude = intent.getStringExtra("latitude");
-		
+		String _longitude = intent.getStringExtra("latitude");
+		String _latitude = intent.getStringExtra("longitude");
 		int longitude = (int) (1000000 * Double.parseDouble(_longitude));
 		int latitude = (int) (1000000 * Double.parseDouble(_latitude));
-		//longitude = (int) (1000000 * Double.parseDouble("116.307597"));
-		//latitude = (int) (1000000 * Double.parseDouble("40.048684"));
+//		int longitude = (int) (1000000 * Double.parseDouble("29.360038"));
+//		int latitude = (int) (1000000 * Double.parseDouble("105.943658"));
 		GeoPoint ptCenter = new GeoPoint(longitude, latitude);
 		Drawable marker = getResources().getDrawable(R.drawable.icon_marka); // 得到需要标在地图上的资源
 		mMapView.getOverlays().add(

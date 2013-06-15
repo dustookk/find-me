@@ -17,6 +17,7 @@ import android.widget.TextView;
 public class ContactsActivity extends Activity {
 	ListView lvContacts;
 
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -37,7 +38,7 @@ public class ContactsActivity extends Activity {
 																			// application's
 																			// Context
 																			// object
-				R.layout.activity_contacts_item, // A layout in XML for one row
+				R.layout.activity_contacts_dialog_item, // A layout in XML for one row
 													// in the ListView
 				cursor, // The result from the query
 				mProjection, // A string array of column names in the cursor
@@ -63,6 +64,5 @@ public class ContactsActivity extends Activity {
 		});
 	}
 }
-
 // after everything you've been through , you get to look into each other's eyes
 // and say I love you , that's beautiful;

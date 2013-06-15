@@ -10,14 +10,14 @@ import com.baidu.location.BDLocationListener;
 import com.baidu.location.BDNotifyListener;
 import com.baidu.location.LocationClient;
 
-public class Location extends Application {
+public class Location extends Application{
 
 	public static String locationResult = "";
 
 	public LocationClient mLocationClient = null;
 	// public LocationClient locationClient = null;
 	// public LocationClient LocationClient = null;
-	private String mData;
+	//private String mData;
 	public MyLocationListenner myListener = new MyLocationListenner();
 	// public MyLocationListenner listener = new MyLocationListenner();
 	// public MyLocationListenner locListener = new MyLocationListenner();
@@ -38,7 +38,6 @@ public class Location extends Application {
 		// mNotifyer.SetNotifyLocation(40.047883,116.312564,3000,"gps");//4个参数代表要位置提醒的点的坐标，具体含义依次为：纬度，经度，距离范围，坐标系类型(gcj02,gps,bd09,bd09ll)
 		// mLocationClient.registerNotify(mNotifyer);
 
-		super.onCreate();
 		Log.d(TAG, "... Application onCreate... pid=" + Process.myPid());
 	}
 
@@ -64,33 +63,66 @@ public class Location extends Application {
 			if (location == null)
 				return;
 			StringBuffer sb = new StringBuffer(256);
-			sb.append("addr:");
 			sb.append(location.getAddrStr());
-			sb.append("\nlatitude : ");
+			sb.append("_");
 			sb.append(location.getLatitude());
-			sb.append("\nlontitude : ");
+			sb.append("_");
 			sb.append(location.getLongitude());
 			logMsg(sb.toString());
 			Log.i(TAG, sb.toString());
 		}
-
 		public void onReceivePoi(BDLocation poiLocation) {
 			if (poiLocation == null) {
 				return;
 			}
 			StringBuffer sb = new StringBuffer(256);
 			sb.append(poiLocation.getLocType());
-			sb.append("\nlatitude : ");
+			sb.append("\nlatitude:");
 			sb.append(poiLocation.getLatitude());
-			sb.append("\nlontitude : ");
+			sb.append("\nlontitude:");
 			if (poiLocation.getLocType() == BDLocation.TypeNetWorkLocation) {
-				sb.append("\naddr : ");
+				sb.append("\naddr:");
 				sb.append(poiLocation.getAddrStr());
 			}
 			logMsg(sb.toString());
 		}
 	}
-
+/*	*//**
+	 * 监听函数，又新位置的时候，格式化成字符串，输出到屏幕中
+	 *//*
+	public class MyLocationListenner implements BDLocationListener {
+		@Override
+		public void onReceiveLocation(BDLocation location) {
+			if (location == null)
+				return;
+			StringBuffer sb = new StringBuffer(256);
+			sb.append("addr:");
+			sb.append(location.getAddrStr());
+			sb.append("\nlatitude:");
+			sb.append(location.getLatitude());
+			sb.append("\nlontitude:");
+			sb.append(location.getLongitude());
+			logMsg(sb.toString());
+			Log.i(TAG, sb.toString());
+		}
+		
+		public void onReceivePoi(BDLocation poiLocation) {
+			if (poiLocation == null) {
+				return;
+			}
+			StringBuffer sb = new StringBuffer(256);
+			sb.append(poiLocation.getLocType());
+			sb.append("\nlatitude:");
+			sb.append(poiLocation.getLatitude());
+			sb.append("\nlontitude:");
+			if (poiLocation.getLocType() == BDLocation.TypeNetWorkLocation) {
+				sb.append("\naddr:");
+				sb.append(poiLocation.getAddrStr());
+			}
+			logMsg(sb.toString());
+		}
+	}
+*/
 	public class NotifyLister extends BDNotifyListener {
 		public void onNotify(BDLocation mlocation, float distance) {
 			mVibrator01.vibrate(1000);

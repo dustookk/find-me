@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,10 +18,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.gdg.findme.R;
+import com.gdg.findme.TrustActivity;
 import com.gdg.findme.service.LocationService;
 
-public class Fragment_setting extends Fragment implements OnClickListener {
-	private static final String TAG = "com.gdg.findme";
+public class FragmentSetting extends Fragment implements OnClickListener {
 	private LinearLayout ll_start_service;
 	private TextView tv_start_service;
 	private TextView tv_set_trust;
@@ -68,7 +67,8 @@ public class Fragment_setting extends Fragment implements OnClickListener {
 			}
 			serviceIsStarted=!serviceIsStarted;
 		}else if(v==tv_set_trust){
-			//设置白名单
+			Intent trustIntent=new Intent(getActivity(),TrustActivity.class);
+			startActivity(trustIntent);
 		}
 	}
 	
