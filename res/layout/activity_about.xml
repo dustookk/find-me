@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dip"
+    android:paddingRight="20dip"
+    android:paddingTop="50dip" >
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/hello_world"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_logo"
+        android:layout_toRightOf="@id/iv_logo" />
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_logo"
+        android:layout_marginTop="30dip"
+        android:lineSpacingExtra="3dip"
+        android:text="@string/about" />
+
+    <LinearLayout
+        android:id="@+id/ll_emails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_about"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="30dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_email_gyh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email_gyh" />
+
+        <TextView
+            android:id="@+id/tv_emails_gzp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:text="@string/email_gzp" />
+
+        <TextView
+            android:id="@+id/tv_emails_dpt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:text="@string/email_dpt" />
+    </LinearLayout>
+
+</RelativeLayout>

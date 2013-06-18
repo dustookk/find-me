@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1dabc5" >
+    
     <Button
         android:id="@+id/fragment1_bt"
         android:layout_alignParentBottom="true"
@@ -14,6 +15,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/ok" />
     <LinearLayout
+        android:id="@+id/ll_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/fragment1_bt"
@@ -23,6 +25,7 @@
 
         <EditText
             android:id="@+id/fragment1_number"
+            android:hint="@string/please_input_the_number"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="100"
@@ -38,6 +41,15 @@
             android:src="@drawable/ic_add_contact_holo_dark" />
     </LinearLayout>
 
-
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_above="@id/ll_number"
+        android:contentDescription="@string/hello_world"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/map" />
 
 </RelativeLayout>

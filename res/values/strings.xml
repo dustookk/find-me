@@ -4,17 +4,24 @@
     <string name="app_name">FindMe</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="kn_protect_guide_first">kn_protect_guide_first</string>
-    <string name="bt_fragment_guide_next">下一步</string>
-    <string name="kn_protect_guide_second">kn_protect_guide_second</string>
-    <string name="kn_protect_guide_third">kn_protect_guide_third</string>
     <string name="ok">确认</string>
     <string name="location">具体位置</string>
     <string name="showinmap">在地图中查看</string>
     <string name="back">返回</string>
     <string name="title1">我要找别人</string>
     <string name="title2">别人要找我</string>
-    <string name="service_is_started">让别人可以找到我</string>
+    <string name="service_is_started">别人可以找到我</string>
     <string name="service_is_stoped">不让别人找到我</string>
+    <string name="version">1.0</string>
+    <string name="about">\t感谢您使用我们的软件!如果您在使用的过程中遇到问题,或者有好的建议,欢迎与我们联系:</string>
+    <string name="email_gyh">dustookk@gmail.com</string>
+    <string name="email_gzp">ihsan.gaozp@gmail.com</string>
+    <string name="email_dpt">dupengtao88@gmail.com</string>
+    <string name="please_input_the_number">请输入您要定位的号码</string>
+    <string name="set_trust_list">设置白名单</string>
+    <string name="about_about">关于</string>
+    <string name="add_from_contactsbook">从通讯录中添加</string>
+    <string name="add">添加</string>
+    <string name="please_input_the_trust_number">请输入要添加的号码</string>
 
 </resources>

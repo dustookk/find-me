@@ -61,7 +61,7 @@ public class TrustActivity extends ListActivity implements OnClickListener {
 		// initDialog
 		dialog = new Dialog(this);
 		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		dialog.setContentView(R.layout.dialog);
+		dialog.setContentView(R.layout.dialog_add_trust);
 		et_input_new_number = (EditText) dialog
 				.findViewById(R.id.et_input_new_number);
 		bt_confirm_add = (Button) dialog.findViewById(R.id.bt_confirm_add);

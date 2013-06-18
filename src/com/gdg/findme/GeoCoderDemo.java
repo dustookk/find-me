@@ -25,6 +25,7 @@ public class GeoCoderDemo extends Activity {
 	MKSearch mSearch = null; // 搜索模块，也可去掉地图模块独立使用
 	BMapManager mBMapMan = null;
 
+	@SuppressWarnings("deprecation")
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
@@ -93,6 +94,7 @@ public class GeoCoderDemo extends Activity {
 		mMapView.onRestoreInstanceState(savedInstanceState);
 	}
 
+	@SuppressWarnings("rawtypes")
 	class OverItemT extends ItemizedOverlay {
 		private List<OverlayItem> mGeoList = new ArrayList<OverlayItem>();
 

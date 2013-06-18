@@ -40,14 +40,14 @@ public class SendLocationService extends IntentService {
 		mLocClient.start(); 
 		do{
 			try {
-				Thread.sleep(5000);
+				Thread.sleep(3000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}while (Location.locationResult == "");
 		
 		String result = "#findme#_" +Location.locationResult;
-		
+		Location.locationResult = "";//还原
 		// 关闭gps位置服务
 		mLocClient.stop();
 		// 发送短信的功能
