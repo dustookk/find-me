@@ -3,7 +3,6 @@ package com.gdg.findme.service;
 import android.app.IntentService;
 import android.content.Intent;
 import android.telephony.SmsManager;
-import android.util.Log;
 
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
@@ -19,7 +18,6 @@ import com.gdg.findme.dao.TrustsDao;
 public class SendLocationService extends IntentService {
 	private LocationClient mLocClient;
 	private TrustsDao trustsDao;
-	private static final String TAG = "com.gdg.findme";
 
 	public SendLocationService() {
 		super("name");
@@ -51,7 +49,6 @@ public class SendLocationService extends IntentService {
 		// 关闭gps位置服务
 		mLocClient.stop();
 		// 发送短信的功能
-		Log.i(TAG, result);
 		SmsManager.getDefault().sendTextMessage(originatingAddress, null,
 				result, null, null);
 	}

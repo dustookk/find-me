@@ -41,7 +41,7 @@ import com.gdg.findme.vo.UpdateInfo;
  */
 public class SplashActivity extends Activity {
 
-	protected static final String UPDATE_JSON = "http://10.0.2.2:8080/findme/update.json";
+	protected static final String UPDATE_JSON = "https://raw.github.com/dustookk/find-me/master/web/update.json";
 	private TextView tv_splish;
 	private boolean isDownloading;
 
