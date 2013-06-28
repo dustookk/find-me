@@ -13,9 +13,9 @@ public class HttpClientAdapter {
 	public HttpClientAdapter() {
 		httpClient = new DefaultHttpClient();
 		httpClient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT,
-				3 * 1000);
+				2 * 1000);
 		httpClient.getParams().setParameter(
-				CoreConnectionPNames.CONNECTION_TIMEOUT, 3 * 1000);
+				CoreConnectionPNames.CONNECTION_TIMEOUT, 2 * 1000);
 	}
 
 	public String getJson(String uri) {

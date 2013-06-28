@@ -127,7 +127,6 @@ public class FragmentMain extends Fragment implements OnClickListener {
 				handler.sendEmptyMessage(NOTHING_RECEIVED);
 			}
 		};
-
 		dialog.setOnDismissListener(new OnDismissListener() {
 			@Override
 			public void onDismiss(DialogInterface dialog) {
@@ -136,7 +135,6 @@ public class FragmentMain extends Fragment implements OnClickListener {
 				unregister();
 			}
 		});
-
 		// 初始化alertDialog
 		AlertDialog.Builder builer = new AlertDialog.Builder(context);
 		builer.setTitle("定位失败T_T");
