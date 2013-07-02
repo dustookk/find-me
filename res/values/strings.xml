@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">FindMe</string>
+    <string name="app_name">亲友定位</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="ok">确认</string>
+    <string name="get_him">开始追踪</string>
     <string name="location">具体位置</string>
     <string name="showinmap">在地图中查看</string>
     <string name="back">返回</string>
@@ -12,8 +13,11 @@
     <string name="title2">别人要找我</string>
     <string name="service_is_started">别人可以找到我</string>
     <string name="service_is_stoped">不让别人找到我</string>
+    <string name="notification_is_on">我被定位时提醒我</string>
+    <string name="notification_is_off">我被定位时不提醒我</string>
     <string name="version">1.0</string>
     <string name="about">\t感谢您使用我们的软件!如果您在使用的过程中遇到问题,或者有好的建议,欢迎与我们联系:</string>
+    <string name="statement">1,本软件的开发旨在保证亲人朋友的安全,任何用于非法目的而产生的不良后果与开发者无关.\n\n2,只要对方在本软件设置界面里开启了服务,并将您加入了白名单(或者白名单为空),您就可以在主界面输入他或她的手机号码,继而在地图上找到他.\n\n3,本软件目前是首个版本,通讯采用的是发短信的方式,所以每次定位时,定位方和被定位方都会发出一条短信,移动运营商也会收取这条短信相应的一毛钱费用.而且暂不支持双卡双带的机型.在以后的版本中我们会逐步将基于短信的交互方式变成基于网络的,敬请期待.\n\n4,因为本软件间的通讯是基于短信的,会被小米魅族等深度订制的安卓机型判断为是危险软件,所以您安装的过程中请设置为"信任该程序",在使用的过程中,请允许每一个安全提示, 定位方或者被定位方都可能会看见一条用于本软件通讯的短信,请直接忽视它们.\n\n5,在您使用的过程中如果遇到任何问题,您都可以在"关于"页面点击任意邮箱,发邮件给开发者(请注明您的机型和系统版本).</string>
     <string name="email_gyh">dustookk@gmail.com</string>
     <string name="email_gzp">ihsan.gaozp@gmail.com</string>
     <string name="email_dpt">dupengtao88@gmail.com</string>

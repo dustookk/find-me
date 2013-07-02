@@ -41,7 +41,7 @@ import com.gdg.findme.vo.UpdateInfo;
  */
 public class SplashActivity extends Activity {
 
-	protected static final String UPDATE_JSON = "http://10.0.2.2:8080/findme/update.json";
+	protected static final String UPDATE_JSON = "https://raw.github.com/dustookk/find-me/master/web/update.json";
 	private TextView tv_splish;
 	private boolean isDownloading;
 
@@ -51,26 +51,6 @@ public class SplashActivity extends Activity {
 		setContentView(R.layout.activity_splash);
 		tv_splish = (TextView) findViewById(R.id.tv_splish);
 		tv_splish.setShadowLayer(10F, 11F, 5F, Color.BLACK);
-		// 创建一个AlphaAnimation对象（参数表示从完全完全透明到不透明）
-		AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
-		// 设置动画执行的时间（单位：毫秒）
-		alphaAnimation.setDuration(1500);
-		alphaAnimation.setFillAfter(true);
-
-		ImageView iv_splash_logo = (ImageView) findViewById(R.id.iv_splash_logo);
-		// 创建一个RotateAnimation对象（从某个点移动到另一个点）
-		TranslateAnimation translateAnimation = new TranslateAnimation(
-				Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 0f,
-				Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, -2f);
-		// 设置动画执行的时间（单位：毫秒）
-		translateAnimation.setDuration(1500);
-
-		translateAnimation.setFillAfter(true);
-		// 使用ImageView的startAnimation方法开始执行动画
-		iv_splash_logo.startAnimation(translateAnimation);
-		// 使用ImageView的startAnimation方法开始执行动画
-		tv_splish.startAnimation(alphaAnimation);
-
 		new AsyncTask<Void, Void, UpdateInfo>() {
 			@Override
 			protected UpdateInfo doInBackground(Void... params) {
@@ -91,13 +71,19 @@ public class SplashActivity extends Activity {
 					String link = jsonObj.getString("link");
 					return new UpdateInfo(version, changeLog, link);
 				} else {
-					return null;
+					return new UpdateInfo(); // 没有新版本
 				}
 			}
 
 			@Override
 			protected void onPostExecute(final UpdateInfo updateInfo) {
 				if (updateInfo != null) {
+					// 没有新版本
+					if (updateInfo.getVersion() == null) {
+						startFindme(false);
+						return ;
+					}
+					//有新版本
 					AlertDialog.Builder builer = new AlertDialog.Builder(
 							SplashActivity.this);
 					builer.setPositiveButton("立即下载", new MyOnClickListener(
@@ -128,7 +114,31 @@ public class SplashActivity extends Activity {
 				}
 			}
 		}.execute();
+		startAnims();
+	}
 
+	/*
+	 * splash 界面的动画
+	 */
+	private void startAnims() {
+		// 创建一个AlphaAnimation对象（参数表示从完全完全透明到不透明）
+		AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
+		// 设置动画执行的时间（单位：毫秒）
+		alphaAnimation.setDuration(1500);
+		alphaAnimation.setFillAfter(true);
+
+		ImageView iv_splash_logo = (ImageView) findViewById(R.id.iv_splash_logo);
+		// 创建一个RotateAnimation对象（从某个点移动到另一个点）
+		TranslateAnimation translateAnimation = new TranslateAnimation(
+				Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 0f,
+				Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, -2f);
+		// 设置动画执行的时间（单位：毫秒）
+		translateAnimation.setDuration(1500);
+		translateAnimation.setFillAfter(true);
+		// 使用ImageView的startAnimation方法开始执行动画
+		iv_splash_logo.startAnimation(translateAnimation);
+		// 使用ImageView的startAnimation方法开始执行动画
+		tv_splish.startAnimation(alphaAnimation);
 	}
 
 	/**
@@ -153,7 +163,6 @@ public class SplashActivity extends Activity {
 		public void onClick(DialogInterface dialog, int which) {
 			new AsyncTask<Void, Void, File>() {
 				URL url = null;
-
 				@Override
 				protected void onPreExecute() {
 					try {
@@ -239,6 +248,7 @@ public class SplashActivity extends Activity {
 					SplashActivity.this.finish();
 				}
 			}, 1500);
+
 		} else {
 			SplashActivity.this.startActivity(i);
 			overridePendingTransition(R.anim.fade, R.anim.hold);

@@ -42,6 +42,7 @@ public class FragmentResult extends Fragment implements OnClickListener {
 	private String addr;
 	private String longitude;
 	private String latitude;
+	private HomeActivity homeActivity;
 
 	// 获取地址的dialog
 	private ProgressDialog progressDialog;
@@ -69,7 +70,14 @@ public class FragmentResult extends Fragment implements OnClickListener {
 		} else {
 			tv_addr.setText(addr);
 		}
+		homeActivity=(HomeActivity) getActivity();
+		homeActivity.isResultShowing=true;
 		return view;
+	}
+	@Override
+	public void onDestroy() {
+		homeActivity.isResultShowing=false;
+		super.onDestroy();
 	}
 
 	private void setClickableResult() {
@@ -88,7 +96,6 @@ public class FragmentResult extends Fragment implements OnClickListener {
 				}
 			}
 		}, index, addrText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
 		ss.setSpan(new ForegroundColorSpan(0xffffffff), 0, addrText.length(), 0);
 		tv_addr.setText(ss);
 		tv_addr.setMovementMethod(LinkMovementMethod.getInstance());

@@ -3,12 +3,12 @@ package com.gdg.findme.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gdg.findme.vo.Contact;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.gdg.findme.vo.Contact;
 
 
 public class TrustsDao {
@@ -39,7 +39,7 @@ public class TrustsDao {
 	
 	public List<Contact> getAll() {
 		db = dBHelper.getReadableDatabase();
-		Cursor cursor = db.query("trusts", null, null, null, null, null, null);
+		Cursor cursor = db.query("trusts", null, null, null, null, null,null);
 		int idIndex = cursor.getColumnIndex("_id");
 		int nameIndex = cursor.getColumnIndex("name");
 		int numberIndex = cursor.getColumnIndex("number");
@@ -64,9 +64,14 @@ public class TrustsDao {
 	public boolean checkExist(String number) {
 		boolean flag=false;
 		db = dBHelper.getReadableDatabase();
-		Cursor cursor = db.query("trusts", null, "number=?", new String[]{number}, null, null, null);
-		if (cursor.moveToNext()) {
-			flag=true;
+		Cursor cursor = db.query("trusts", null, null, null, null, null, null);
+		String dbnumber=null;
+		while (cursor.moveToNext()) {
+			dbnumber= cursor.getString(cursor.getColumnIndex("number"));
+			if(number.contains(dbnumber)) {
+				flag=true;
+				break;
+			}
 		}
 		cursor.close();
 		db.close();

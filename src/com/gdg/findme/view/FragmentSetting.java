@@ -7,6 +7,8 @@ import android.app.ActivityManager.RunningServiceInfo;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -66,6 +68,7 @@ public class FragmentSetting extends Fragment implements OnClickListener {
 		if (serviceIsStarted) {
 			tv_start_service.setText(getResources().getString(
 					R.string.service_is_started));
+			
 			iv_start_service
 					.setImageResource(R.drawable.general__shared__switch_selected);
 		} else {
@@ -80,21 +83,26 @@ public class FragmentSetting extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		if (v == ll_start_service) {
+			SharedPreferences sp=getActivity().getSharedPreferences("config", Context.MODE_PRIVATE);
+			Editor editor = sp.edit();
 			Intent locationService = new Intent(getActivity(),
 					LocationService.class);
-			if (serviceIsStarted) {// 在此之前服务已经开启
+			if (serviceIsStarted) {// 在此之前服务已经开启,现在要设置成关闭状态
 				tv_start_service.setText(getResources().getString(
 						R.string.service_is_stoped));
 				iv_start_service
 						.setImageResource(R.drawable.general__shared__switch_normal);
 				getActivity().stopService(locationService);
+				editor.putBoolean("startService", false);
 			} else {
 				tv_start_service.setText(getResources().getString(
 						R.string.service_is_started));
 				iv_start_service
 						.setImageResource(R.drawable.general__shared__switch_selected);
 				getActivity().startService(locationService);
+				editor.putBoolean("startService", true);
 			}
+			editor.commit();
 			serviceIsStarted = !serviceIsStarted;
 		} else if (v == tv_set_trust) {
 			Intent trustIntent = new Intent(getActivity(), TrustActivity.class);

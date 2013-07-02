@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
@@ -31,7 +32,7 @@ public class ContactsActivity extends Activity {
 				Phone.NUMBER // "data1"
 		};
 		Cursor cursor = getContentResolver().query(Phone.CONTENT_URI, null,
-				null, null, null);
+				null, null, ContactsContract.Contacts.DISPLAY_NAME + " COLLATE LOCALIZED DESC");
 
 		int[] mWordListItems = new int[] { R.id.tv_name, R.id.tv_phone };
 		SimpleCursorAdapter mCursorAdapter = new SimpleCursorAdapter(this, // The

@@ -49,7 +49,7 @@ import com.gdg.findme.utils.KillSystemSmsAppTool;
  */
 @SuppressLint("HandlerLeak")
 public class FragmentMain extends Fragment implements OnClickListener {
-	protected static final int COUNTDOWNTIME = 45;
+	protected static final int COUNTDOWNTIME = 60; //倒计时
 	protected int count = COUNTDOWNTIME;
 	protected static final int MESSAGE_RECEIVED = 0;
 	protected static final int NOTHING_RECEIVED = 1;
@@ -127,7 +127,6 @@ public class FragmentMain extends Fragment implements OnClickListener {
 				handler.sendEmptyMessage(NOTHING_RECEIVED);
 			}
 		};
-
 		dialog.setOnDismissListener(new OnDismissListener() {
 			@Override
 			public void onDismiss(DialogInterface dialog) {
@@ -136,7 +135,6 @@ public class FragmentMain extends Fragment implements OnClickListener {
 				unregister();
 			}
 		});
-
 		// 初始化alertDialog
 		AlertDialog.Builder builer = new AlertDialog.Builder(context);
 		builer.setTitle("定位失败T_T");
@@ -151,14 +149,15 @@ public class FragmentMain extends Fragment implements OnClickListener {
 	}
 
 	@Override
-	public void onStop() {
+	public void onPause() {
 		isDismissed=true;
-		super.onStop();
+		super.onPause();
 	}
 	
 	@Override
-	public void onStart() {
-		super.onStart();
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
 		if(ifNeedChangeUI) {
 			FragmentTransaction ft = getFragmentManager()
 					.beginTransaction();
@@ -168,7 +167,6 @@ public class FragmentMain extends Fragment implements OnClickListener {
 		}
 		isDismissed=false;
 	}
-	
 	
 	@Override
 	public void onDestroy() {

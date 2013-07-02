@@ -69,7 +69,6 @@ public class Location extends Application{
 			sb.append("_");
 			sb.append(location.getLongitude());
 			logMsg(sb.toString());
-			Log.i(TAG, sb.toString());
 		}
 		public void onReceivePoi(BDLocation poiLocation) {
 			if (poiLocation == null) {
@@ -103,7 +102,6 @@ public class Location extends Application{
 			sb.append("\nlontitude:");
 			sb.append(location.getLongitude());
 			logMsg(sb.toString());
-			Log.i(TAG, sb.toString());
 		}
 		
 		public void onReceivePoi(BDLocation poiLocation) {
