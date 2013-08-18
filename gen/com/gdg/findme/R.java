@@ -50,8 +50,8 @@ public final class R {
         public static final int xuxian=0x7f020010;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0026;
-        public static final int bmapView=0x7f0a0025;
+        public static final int action_settings=0x7f0a0027;
+        public static final int bmapView=0x7f0a0026;
         public static final int bt_add=0x7f0a0012;
         public static final int bt_choose_from_contacts=0x7f0a0018;
         public static final int bt_confirm_add=0x7f0a0017;
@@ -79,6 +79,7 @@ public final class R {
         public static final int rlay_activity_splash=0x7f0a000e;
         public static final int tv_about=0x7f0a0002;
         public static final int tv_countdown=0x7f0a0014;
+        public static final int tv_donate=0x7f0a0024;
         public static final int tv_email_gyh=0x7f0a0004;
         public static final int tv_emails_dpt=0x7f0a0006;
         public static final int tv_emails_gzp=0x7f0a0005;
@@ -87,7 +88,7 @@ public final class R {
         public static final int tv_set_trust=0x7f0a0023;
         public static final int tv_splish=0x7f0a0011;
         public static final int tv_start_service=0x7f0a0021;
-        public static final int tv_system_about=0x7f0a0024;
+        public static final int tv_system_about=0x7f0a0025;
         public static final int tv_version=0x7f0a0001;
     }
     public static final class layout {
@@ -110,12 +111,13 @@ public final class R {
     }
     public static final class string {
         public static final int about=0x7f07000f;
-        public static final int about_about=0x7f070016;
+        public static final int about_about=0x7f070017;
         public static final int action_settings=0x7f070001;
-        public static final int add=0x7f070018;
-        public static final int add_from_contactsbook=0x7f070017;
+        public static final int add=0x7f070019;
+        public static final int add_from_contactsbook=0x7f070018;
         public static final int app_name=0x7f070000;
         public static final int back=0x7f070007;
+        public static final int donate=0x7f070016;
         public static final int email_dpt=0x7f070013;
         public static final int email_gyh=0x7f070011;
         public static final int email_gzp=0x7f070012;
@@ -126,7 +128,7 @@ public final class R {
         public static final int notification_is_on=0x7f07000c;
         public static final int ok=0x7f070003;
         public static final int please_input_the_number=0x7f070014;
-        public static final int please_input_the_trust_number=0x7f070019;
+        public static final int please_input_the_trust_number=0x7f07001a;
         public static final int service_is_started=0x7f07000a;
         public static final int service_is_stoped=0x7f07000b;
         public static final int set_trust_list=0x7f070015;

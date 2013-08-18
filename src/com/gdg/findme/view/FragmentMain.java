@@ -49,7 +49,7 @@ import com.gdg.findme.utils.KillSystemSmsAppTool;
  */
 @SuppressLint("HandlerLeak")
 public class FragmentMain extends Fragment implements OnClickListener {
-	protected static final int COUNTDOWNTIME = 60; //倒计时
+	protected static final int COUNTDOWNTIME = 120; //倒计时
 	protected int count = COUNTDOWNTIME;
 	protected static final int MESSAGE_RECEIVED = 0;
 	protected static final int NOTHING_RECEIVED = 1;
@@ -260,7 +260,7 @@ public class FragmentMain extends Fragment implements OnClickListener {
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (data != null) {
 			String phoneRaw = data.getStringExtra("phone");
-			String phone = phoneRaw.replace("+86", "").replace("-", "");
+			String phone = phoneRaw.replace("+86", "").replace("-", "").replace(" ", "");
 			et_number.setText(phone);
 		}
 	}

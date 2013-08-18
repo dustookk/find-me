@@ -9,10 +9,10 @@
     <string name="location">具体位置</string>
     <string name="showinmap">在地图中查看</string>
     <string name="back">返回</string>
-    <string name="title1">我要找别人</string>
-    <string name="title2">别人要找我</string>
-    <string name="service_is_started">别人可以找到我</string>
-    <string name="service_is_stoped">不让别人找到我</string>
+    <string name="title1">找人</string>
+    <string name="title2">找我</string>
+    <string name="service_is_started">让别人找我</string>
+    <string name="service_is_stoped">不让别人找我</string>
     <string name="notification_is_on">我被定位时提醒我</string>
     <string name="notification_is_off">我被定位时不提醒我</string>
     <string name="version">1.0</string>
@@ -23,6 +23,7 @@
     <string name="email_dpt">dupengtao88@gmail.com</string>
     <string name="please_input_the_number">请输入您要定位的号码</string>
     <string name="set_trust_list">设置白名单</string>
+    <string name="donate">捐助开发者</string>
     <string name="about_about">关于</string>
     <string name="add_from_contactsbook">从通讯录中添加</string>
     <string name="add">添加</string>

@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -16,9 +17,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -34,6 +35,7 @@ public class FragmentSetting extends Fragment implements OnClickListener {
 	private TextView tv_start_service;
 	private TextView tv_set_trust;
 	private TextView tv_system_about;
+	private TextView tv_donate;
 	private ImageView iv_start_service;
 	private ImageView iv_logo;
 	private int logoClickCount;
@@ -49,6 +51,7 @@ public class FragmentSetting extends Fragment implements OnClickListener {
 		tv_start_service = (TextView) settingView
 				.findViewById(R.id.tv_start_service);
 		tv_set_trust = (TextView) settingView.findViewById(R.id.tv_set_trust);
+		tv_donate = (TextView) settingView.findViewById(R.id.tv_donate);
 		tv_system_about = (TextView) settingView
 				.findViewById(R.id.tv_system_about);
 		iv_start_service = (ImageView) settingView
@@ -58,6 +61,7 @@ public class FragmentSetting extends Fragment implements OnClickListener {
 		ll_start_service.setOnClickListener(this);
 		tv_set_trust.setOnClickListener(this);
 		tv_system_about.setOnClickListener(this);
+		tv_donate.setOnClickListener(this);
 		iv_logo.setOnClickListener(this);
 		return settingView;
 	}
@@ -107,6 +111,10 @@ public class FragmentSetting extends Fragment implements OnClickListener {
 		} else if (v == tv_set_trust) {
 			Intent trustIntent = new Intent(getActivity(), TrustActivity.class);
 			startActivity(trustIntent);
+		}else if (v == tv_donate) { //捐助
+		    Uri uriUrl = Uri.parse("https://m.alipay.com/personal/payment.htm?userId=2088102951936853&reason=%E8%B5%9E%E5%8A%A9%E7%93%B6%E5%8F%AF%E4%B9%90%E5%90%A7%E4%BA%B2&weChat=true&amount=3");  
+		    Intent donateBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);  
+			startActivity(donateBrowser);
 		}else if (v == tv_system_about) { //关于
 			Intent aboutIntent=new Intent(getActivity(),AboutActivity.class);
 			startActivity(aboutIntent);

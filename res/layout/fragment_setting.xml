@@ -56,6 +56,24 @@
         android:layout_margin="10dp"
         android:contentDescription="@string/hello_world"
         android:src="@drawable/xuxian" />
+    
+    <TextView
+        android:id="@+id/tv_donate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:text="@string/donate"
+        android:textColor="@color/system_selector"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/hello_world"
+        android:src="@drawable/xuxian" />
 
     <TextView
         android:id="@+id/tv_system_about"
@@ -74,6 +92,7 @@
         android:layout_margin="10dp"
         android:contentDescription="@string/hello_world"
         android:src="@drawable/xuxian" />
+    
 
     <ImageView
         android:id="@+id/iv_logo"

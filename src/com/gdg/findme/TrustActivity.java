@@ -122,7 +122,7 @@ public class TrustActivity extends ListActivity implements OnClickListener {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (data != null) {
 			String phoneRaw = data.getStringExtra("phone");
-			String phone = phoneRaw.replace("-", "");
+			String phone = phoneRaw.replace("+86", "").replace("-", "").replace(" ", "");
 			String name = data.getStringExtra("name");
 			Contact contact = new Contact(name, phone);
 			addContact(contact);
