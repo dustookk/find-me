@@ -1,3 +1,12 @@
+Findme2.0
+=======
+
+This Project is been updated , check this out: https://github.com/dustookk/findme2
+
+
+
+Readme
+=======
 《亲友定位》让家人、朋友随时随地定位到彼此精准的位置信息 . 基于短信交互,所以不需要联网,不需要注册登陆,不需要GPS,只要手机有信号,就能被定位. (当然开启gps或者网络后可以提高定位的精确度.)
 
 一, 使用方法.
